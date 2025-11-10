@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Grade Calculator</title>
   <script src="calc.js" defer></script>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -33,13 +33,14 @@
         <th>Result</th>
       </tr>
     </thead>
-    <tbody>
-      <!-- Row 1 -->
-      <tr>
-        <td>1</td>
-        <td>Mathematics I</td>
+
+    <!-- ===== Bloc 1 (3 rows; Overall ECTS = 13) ===== -->
+    <tbody class="bloc bloc-1">
+      <tr data-bloc="1">
+        <td class="bloc-cell" rowspan="3">1</td>
+        <td>Calculus I</td>
         <td class="ects">6</td>
-        <td>13</td>
+        <td class="overall-cell" rowspan="3">13</td>
         <td><input class="midterm" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
         <td><input class="final" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
         <td class="avg">&mdash;</td>
@@ -47,13 +48,10 @@
         <td class="mog">&mdash;</td>
         <td class="result">&mdash;</td>
       </tr>
-
-      <!-- Row 2 -->
-      <tr>
-        <td>1</td>
-        <td>Mathematics I</td>
-        <td class="ects">6</td>
-        <td>13</td>
+      <tr data-bloc="1">
+        <td>Analytic Geometry & Algebra</td>
+        <td class="ects">4</td>
+        <!-- Overall ECTS merged above -->
         <td><input class="midterm" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
         <td><input class="final" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
         <td class="avg">&mdash;</td>
@@ -61,13 +59,10 @@
         <td class="mog">&mdash;</td>
         <td class="result">&mdash;</td>
       </tr>
-
-      <!-- Row 3 -->
-      <tr>
-        <td>1</td>
-        <td>Mathematics I</td>
-        <td class="ects">6</td>
-        <td>13</td>
+      <tr data-bloc="1">
+        <td>Descriptive Statistics</td>
+        <td class="ects">3</td>
+        <!-- Overall ECTS merged above -->
         <td><input class="midterm" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
         <td><input class="final" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
         <td class="avg">&mdash;</td>
@@ -75,13 +70,15 @@
         <td class="mog">&mdash;</td>
         <td class="result">&mdash;</td>
       </tr>
+    </tbody>
 
-      <!-- Row 4 -->
-      <tr>
-        <td>2</td>
-        <td>Mathematics I</td>
-        <td class="ects">6</td>
-        <td>13</td>
+    <!-- ===== Bloc 2 (3 rows; Overall ECTS = 8) ===== -->
+    <tbody class="bloc bloc-2">
+      <tr data-bloc="2">
+        <td class="bloc-cell" rowspan="3">2</td>
+        <td>Reinforced CS I</td>
+        <td class="ects">4</td>
+        <td class="overall-cell" rowspan="3">8</td>
         <td><input class="midterm" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
         <td><input class="final" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
         <td class="avg">&mdash;</td>
@@ -89,13 +86,10 @@
         <td class="mog">&mdash;</td>
         <td class="result">&mdash;</td>
       </tr>
-
-      <!-- Row 5 -->
-      <tr>
-        <td>2</td>
-        <td>Mathematics I</td>
-        <td class="ects">6</td>
-        <td>13</td>
+      <tr data-bloc="2">
+        <td>Become student</td>
+        <td class="ects">3</td>
+        <!-- Overall ECTS merged above -->
         <td><input class="midterm" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
         <td><input class="final" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
         <td class="avg">&mdash;</td>
@@ -103,13 +97,10 @@
         <td class="mog">&mdash;</td>
         <td class="result">&mdash;</td>
       </tr>
-
-      <!-- Row 6 -->
-      <tr>
-        <td>3</td>
-        <td>Mathematics I</td>
-        <td class="ects">6</td>
-        <td>13</td>
+      <tr data-bloc="2">
+        <td>Generative AI</td>
+        <td class="ects">1</td>
+        <!-- Overall ECTS merged above -->
         <td><input class="midterm" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
         <td><input class="final" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
         <td class="avg">&mdash;</td>
@@ -117,13 +108,53 @@
         <td class="mog">&mdash;</td>
         <td class="result">&mdash;</td>
       </tr>
+    </tbody>
 
-      <!-- Row 7 -->
-      <tr>
-        <td>4</td>
-        <td>Mathematics I</td>
-        <td class="ects">6</td>
-        <td>13</td>
+    <!-- ===== Bloc 3 (1 row; Overall ECTS = 5) ===== -->
+    <tbody class="bloc bloc-3">
+      <tr data-bloc="3">
+        <td class="bloc-cell" rowspan="1">3</td>
+        <td>French</td>
+        <td class="ects">5</td>
+        <td class="overall-cell" rowspan="1">5</td>
+        <td><input class="midterm" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
+        <td><input class="final" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
+        <td class="avg">&mdash;</td>
+        <td class="gpa">&mdash;</td>
+        <td class="mog">&mdash;</td>
+        <td class="result">&mdash;</td>
+      </tr>
+    </tbody>
+
+    <!-- ===== Bloc 4 (3 rows; Overall ECTS = 4) ===== -->
+    <tbody class="bloc bloc-4">
+      <tr data-bloc="4">
+        <td class="bloc-cell" rowspan="3">4</td>
+        <td>English</td>
+        <td class="ects">3</td>
+        <td class="overall-cell" rowspan="3">4</td>
+        <td><input class="midterm" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
+        <td><input class="final" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
+        <td class="avg">&mdash;</td>
+        <td class="gpa">&mdash;</td>
+        <td class="mog">&mdash;</td>
+        <td class="result">&mdash;</td>
+      </tr>
+      <tr data-bloc="4">
+        <td>Spanish</td>
+        <td class="ects">1</td>
+        <!-- Overall ECTS merged above -->
+        <td><input class="midterm" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
+        <td><input class="final" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
+        <td class="avg">&mdash;</td>
+        <td class="gpa">&mdash;</td>
+        <td class="mog">&mdash;</td>
+        <td class="result">&mdash;</td>
+      </tr>
+      <tr data-bloc="4">
+        <td>German</td>
+        <td class="ects">1</td>
+        <!-- Overall ECTS merged above -->
         <td><input class="midterm" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
         <td><input class="final" type="number" min="0" max="20" step="0.1" placeholder="0-20" /></td>
         <td class="avg">&mdash;</td>
